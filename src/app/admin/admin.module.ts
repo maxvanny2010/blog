@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {AuthService} from './shared/services/auth.service';
 import {AuthGuard} from './shared/services/auth.guard';
 import {LoginGuard} from './shared/services/login.guard';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {LoginGuard} from './shared/services/login.guard';
         ]
       }
     ]),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   exports: [RouterModule],
   providers: [AuthService, AuthGuard, LoginGuard]
