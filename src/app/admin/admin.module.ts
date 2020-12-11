@@ -7,6 +7,7 @@ import {DashboardPageComponent} from './dashboard-page/dashboard-page.component'
 import {CreatePageComponent} from './create-page/create-page.component';
 import {EditPageComponent} from './edit-page/edit-page.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {AuthService} from './shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditPageComponent],
+    EditPageComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild([
@@ -30,7 +32,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     ]),
     ReactiveFormsModule
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [AuthService]
 })
 export class AdminModule {
 
