@@ -9,7 +9,7 @@ import {Subscription} from 'rxjs';
   styleUrls: ['./dashboard-page.component.scss']
 })
 export class DashboardPageComponent implements OnInit, OnDestroy {
-  posts: Post[];
+  posts: Post[] = [];
   pSub: Subscription;
 
   constructor(private postsService: PostsService) {
@@ -28,6 +28,6 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
   }
 
   remove(id: string): void {
-   // this.postsService.remove(id).subscribe();
+    // this.postsService.remove(id).subscribe();
   }
 }
