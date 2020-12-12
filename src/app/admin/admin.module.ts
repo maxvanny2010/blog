@@ -6,10 +6,11 @@ import {LoginPageComponent} from './login-page/login-page.component';
 import {DashboardPageComponent} from './dashboard-page/dashboard-page.component';
 import {CreatePageComponent} from './create-page/create-page.component';
 import {EditPageComponent} from './edit-page/edit-page.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuthGuard} from './shared/services/auth.guard';
 import {LoginGuard} from './shared/services/login.guard';
 import {SharedModule} from '../shared/shared.module';
+import {SearchPipe} from './shared/search.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {SharedModule} from '../shared/shared.module';
     LoginPageComponent,
     DashboardPageComponent,
     CreatePageComponent,
-    EditPageComponent
+    EditPageComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import {SharedModule} from '../shared/shared.module';
       }
     ]),
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   exports: [RouterModule],
   providers: [AuthGuard, LoginGuard]
