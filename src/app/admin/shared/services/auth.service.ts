@@ -35,7 +35,7 @@ export class AuthService {
     const {message} = error.error.error;
     switch (message) {
       case  'EMAIL_NOT_FOUND':
-        this.errorS.next('Почтоый адрес не зарегистрирован');
+        this.errorS.next('Почтовый адрес не зарегистрирован');
         break;
       case  'INVALID_PASSWORD':
         this.errorS.next('Неверный пароль');
